@@ -1,0 +1,155 @@
+/* General Section Styling */
+section h1, section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+section h1 span, section h2 span {
+    color: #007bff; /* Highlighted blue color */
+    font-weight: 700;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 1.5rem;
+    line-height: 1.8;
+    max-width: 1500px; /* Limits paragraph width for better readability */
+    margin: 0 auto; /* Centers the paragraph */
+}
+
+/* Team Cards Grid */
+.team-cards {
+    display: flex;
+    justify-content: space-evenly; /* Space cards evenly across the row */
+    gap: 2rem;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    margin-top: 3rem;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    flex: 1 1 calc(25% - 2rem); /* Four cards per row on large screens */
+    max-width: 300px; /* Optional max width for uniform card size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Highlighted shadow */
+}
+
+.card img {
+    height: 55%; /* Maintain aspect ratio */
+    width: 100%;
+    border-radius: 50%; /* Circular profile picture */
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+/* Social Links Styling */
+.card .social-links {
+    display: flex; /* Align icons horizontally */
+    justify-content: center; /* Center-align the icons */
+    gap: 15px; /* Space between the icons */
+    margin-top: 1rem; /* Add space above the social links section */
+}
+
+.card .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle background color */
+    color: #333; /* Default icon color */
+    border-radius: 50%; /* Make the icons circular */
+    text-align: center; /* Center the icon inside the circle */
+    line-height: 40px; /* Align the font-awesome icon vertically */
+    font-size: 18px; /* Adjust icon size */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.card .social-links a:hover {
+    background-color: #007bff; /* Change background on hover */
+    color: #fff; /* Change icon color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet Devices */
+@media (max-width: 1024px) {
+    .team-cards {
+        gap: 1.5rem; /* Reduce spacing between cards */
+    }
+
+    section p {
+        font-size: 1rem;
+        max-width: 1000px; /* Restrict the width further */
+        margin: 0 auto;
+    }
+
+    .card {
+        flex: 1 1 calc(33.333% - 2rem); /* Three cards per row for tablets */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .team-cards {
+        flex-direction: column; /* Stack cards vertically for mobiles */
+        align-items: center;
+    }
+
+    section p {
+        font-size: 1rem;
+        max-width: 600px; /* Restrict the paragraph width */
+        margin: 0 auto;
+    }
+
+    .card {
+        flex: 1 1 100%; /* Full-width cards on mobile */
+        max-width: 90%; /* Ensure cards don't exceed container width */
+    }
+
+    .card img {
+        height: auto; /* Maintain aspect ratio */
+        width: 70%; /* Adjust image size for mobile */
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    section h1, section h2 {
+        font-size: 2rem; /* Smaller heading font for small screens */
+    }
+
+    section p {
+        font-size: 1rem;
+        max-width: 300px; /* Further restrict paragraph width */
+        margin: 0 auto;
+    }
+
+    .card img {
+        height: auto; /* Maintain aspect ratio */
+        width: 70%; /* Adjust image size for smaller mobile screens */
+    }
+}

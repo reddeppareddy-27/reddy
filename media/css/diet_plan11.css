@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Styles */
+
+
+/* Combined Section */
+.combined-section {
+    padding: 0px;
+    line-height: 1.6;
+}
+
+.combined-section h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 35px; /* Title font size */
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Gap between cards */
+    justify-content: center;
+}
+
+/* Card Styles */
+.card {
+    width: calc(33.33% - 20px); /* Three cards per row */
+    max-width: 350px; /* Adjust max-width for consistent size */
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Headings */
+.card h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 15px;
+    font-size: 25px; /* Day heading font size */
+    font-weight: 600;
+}
+
+/* Diet Plan Section */
+.diet-plan h3, .exercises h3 {
+    border-bottom: 2px solid #0dd7ee;
+    margin-bottom: 10px;
+    color: #f5b512;
+    font-weight: 530;
+    font-size: 18px; /* Section heading font size */
+}
+
+.diet-plan ul, .exercises ul {
+    list-style: none;
+    padding: 0;
+}
+
+.diet-plan ul li, .exercises ul li {
+    margin: 8px 0;
+    color: #555;
+    font-size: 14.5px; /* Default font size for list items */
+    font-weight: 400;
+}
+
+.diet-plan ul li strong {
+    color: #000;
+    font-weight: 520;
+    font-size: 15px; /* Font size for strong tags */
+}
+
+/* Exercise Styles */
+.exercise-item {
+    margin-bottom: 15px;
+}
+
+.exercise-item .exercise-name {
+    font-size: 18px; /* Exercise name font size */
+    color: #222;
+    font-weight: 520;
+    margin-bottom: 5px;
+}
+
+.exercise-item .exercise-description {
+    font-size: 14.5px; /* Exercise description font size */
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.youtube-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff0000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none !important;
+    font-size: 14px; /* Button font size */
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgb(232, 55, 55) !important;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.youtube-button:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    color: #0dd7ee;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-weight: bold;
+    font-size: 16px; /* Error message font size */
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px); /* Two cards in a row for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(90% - 20px); /* Increased card width for smaller devices */
+    }
+
+    .combined-section h1 {
+        font-size: 28px; /* Adjusted h1 size for smaller screens */
+    }
+
+    .card h2 {
+        font-size: 18px; /* Adjusted font size for smaller screens */
+    }
+
+    .diet-plan h3, .exercises h3 {
+        font-size: 16px; /* Adjusted font size for smaller screens */
+    }
+
+    .exercise-item .exercise-name {
+        font-size: 16px; /* Adjusted font size for smaller screens */
+    }
+
+    .exercise-item .exercise-description {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+    }
+
+    .youtube-button {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 10px); /* Further increased card width for mobile devices */
+        padding: 15px;
+    }
+
+    .combined-section h1 {
+        font-size: 24px; /* Further reduced h1 size for mobile */
+    }
+
+    .diet-plan h3, .exercises h3 {
+        font-size: 15px; /* Adjusted font size for mobile */
+    }
+
+    .exercise-item .exercise-name {
+        font-size: 14px; /* Adjusted font size for mobile */
+    }
+
+    .exercise-item .exercise-description {
+        font-size: 13px; /* Adjusted font size for mobile */
+    }
+
+    .youtube-button {
+        font-size: 13px; /* Adjusted font size for mobile */
+        padding: 6px 10px;
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width for mobile */
+        padding: 15px;
+    }
+
+    .combined-section h1 {
+        font-size: 24px; /* Further reduced h1 size for mobile */
+    }
+
+    .diet-plan h3, .exercises h3 {
+        font-size: 15px; /* Adjusted font size for mobile */
+    }
+
+    .exercise-item .exercise-name {
+        font-size: 14px; /* Adjusted font size for mobile */
+    }
+
+    .exercise-item .exercise-description {
+        font-size: 13px; /* Adjusted font size for mobile */
+    }
+
+    .youtube-button {
+        font-size: 13px; /* Adjusted font size for mobile */
+        padding: 6px 10px;
+    }
+}

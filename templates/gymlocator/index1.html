@@ -1,0 +1,31 @@
+{% extends "base/base.html" %}
+
+{% block start %}
+<h1>Find a Gym</h1>
+<section id="gym-locator-results">
+    <label for="state">Select State:</label>
+    <select id="state">
+        <option value="">--Select State--</option>
+        {% for state in states %}
+        <option value="{{ state.id }}">{{ state.name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="district">Select District:</label>
+    <select id="district" disabled>
+        <option value="">--Select District--</option>
+    </select>
+
+    <label for="city">Select City:</label>
+    <select id="city" disabled>
+        <option value="">--Select City--</option>
+    </select>
+
+    <h2>Available Gyms</h2>
+    <ul id="gyms-list">
+        <!-- Gym details will be dynamically appended here by JavaScript -->
+    </ul>
+</section>
+
+<script src="/media/js/gym1.js" type="text/javascript"></script>
+{% endblock %}

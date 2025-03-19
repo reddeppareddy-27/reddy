@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>psychofit_x</title>
+
+
+<link rel="shortcut icon" type="image" href="fonts/images/logo1.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<!-- bootstrap links -->
+    <!-- fonts links -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- fonts links -->
+<!-- jQuery -->
+<script src="/media/js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap4 files-->
+<script src="/media/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<link href="/media/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+
+<!-- Font awesome 5 -->
+<link href="/media/fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+<!-- custom style -->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet" href="/media/css/footer1.css">
+<link rel="stylesheet" href="/media/css/nav-bar.css">
+<link rel="stylesheet" href="/media/css/index.css">
+<link rel="stylesheet" href="/media/css/services.css">
+<link rel="stylesheet" href="/media/css/product.css">
+<link rel="stylesheet" href="/media/css/diet_plan11.css">
+<link rel="stylesheet" href="/media/css/index1.css">
+<link rel="stylesheet" href="/media/css/contact.css">
+<link rel="stylesheet" href="/media/css/about1.css">
+<link rel="stylesheet" href="/media/css/pass.css">
+<link rel="stylesheet" href="/media/css/profile.css">
+<link rel="stylesheet" href="/media/css/side-bar.css">
+
+
+
+<link href="media/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Poppins -->
+   
+
+  
+
+
+<!-- custom javascript -->
+<script src="/media/js/script.js" type="text/javascript"></script>
+<script src="/media/js/services.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+/// some script
+
+// jquery ready start
+$(document).ready(function() {
+	// jQuery code
+
+}); 
+// jquery end
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+<body style="font-family: 'Poppins', sans-serif;">
+    <div class="top-navbar">
+        <div class="top-icons">
+            <a href="https://whatsapp.com/channel/0029Vaq1GkS30LKGh6HWx62K" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://whatsapp.com/channel/0029Vaq1GkS30LKGh6HWx62K" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://whatsapp.com/channel/0029Vaq1GkS30LKGh6HWx62K" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://whatsapp.com/channel/0029Vaq1GkS30LKGh6HWx62K" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="other-links">
+            {% if user.is_authenticated %}
+                <!-- Display username and profile icon for logged-in users -->
+                <div class="logged-in">
+                    <span class="username">Hello, {{ user.first_name }}</span>
+                    <a href="#" class="profile-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+                </div>
+            {% else %}
+                <!-- Display Login and Sign up buttons for non-logged-in users -->
+                <button id="btn-login">
+                    <a href="{% url 'login' %}" class="btn-link">Login</a>
+                </button>
+                <button id="btn-signup">
+                    <a href="{% url 'register' %}" class="btn-link">Sign up</a>
+                </button>
+            {% endif %}
+        </div>
+    </div>
+    <!-- top navbar -->
+
+    <div class="home-section">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="#">
+                    <span class="word1">PsychoFit</span> 
+                    <span class="word2">X</span>
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-bars" style="color: white;"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'index'%}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home1' %}">Find Gym</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Category
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #1c1c50;">
+                      <li><a class="dropdown-item" href="{% url 'diet_plan' %}">Weight_Gain</a></li>
+                      <li><a class="dropdown-item" href="{% url 'diet_plan1' %}">Weiht_loss</a></li>
+                      <li><a class="dropdown-item" href="{% url 'height_growth' %}">Height_Growth</a></li>
+                      <li><a class="dropdown-item" href="#"></a></li>
+                      <li><a class="dropdown-item" href="#"></a></li>
+                      <li><a class="dropdown-item" href="#"></a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about-us">About Us</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                  </li>
+                </ul>
+               
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit" id="search-btn">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <!-- navbar -->
+
+    
+         
+     
+    {% if request.path != '/accounts/login/' and request.path != '/accounts/register/' and request.path != '/accounts/forgot_password/' and request.path != '/accounts/reset_password/' and request.path != '/services/services/ '%}
+    <section class="banner">
+        <video autoplay loop muted playsinline>
+            <source src="/media/vedios/vedio.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1>Welcome To <span class="highlight">PsychoFit <span class="highlight1">X</span> </span></h1>
+            <div class="wrapper">
+                <button>
+                  Explore ! 
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+        </div>
+        <a href="#next-section" class="arrow-down">&#8595;</a>
+
+    </section>
+    
+
+   
+{% endif %}
+
+{% block start %}
+{% endblock %}
+{% if request.path != '/accounts/login/' and request.path != '/accounts/register/' and request.path != '/accounts/forgot_password/' and request.path != '/accounts/reset_password/' and request.path != '/services/services/ '%}
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="heading text-center">
+            <h2>Contact <span>Us</span></h2>
+            <p>If you're facing any issues, feel free to contact us.</p>
+        </div>
+
+        <!-- Message Alerts -->
+        {% if messages %}
+            <div>
+                {% for message in messages %}
+                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="title">
+                    <h3>Contact Details</h3>
+                </div>
+                <div class="content">
+                    <!-- Info-1 -->
+                    <div class="info">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4 class="d-inline-block">PHONE :
+                            <br>
+                            <span>+91 6281446699</span></h4>
+                    </div>
+                    <!-- Info-2 -->
+                    <div class="info">
+                        <i class="far fa-envelope"></i>
+                        <h4 class="d-inline-block">EMAIL :
+                            <br>
+                            <span>psychofitx@gmail.com</span></h4>
+                    </div>
+                    <!-- Info-3 -->
+                    <div class="info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4 class="d-inline-block">ADDRESS :
+                            <br>
+                            <span>12_13, SLG Boys Hostel, Narayanavanam(v), Puttur</span></h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <form method="POST" action="/contact-form/">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <button class="btn btn-block" type="submit">Send Now!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% if request.path != '/accounts/login/' and request.path != '/accounts/register/' and request.path != '/accounts/forgot_password/' and request.path != '/accounts/reset_password/' and request.path != '/services/services/ '%}
+<section id="about-us">
+    <div class="container12">
+        <h1>About <span>Us</span></h1>
+        <p>Welcome to our company! We are dedicated to delivering the best services to our clients. With years of experience and a passionate team, we ensure excellence in everything we do.</p>
+
+        <h2>Meet Our <span>Team</span></h2>
+        <div class="team-cards">
+            <div class="card">
+                <img src="/media/team/reddy.jpg" alt="Team Member 1">
+                <h3>REDDEPPA REDDY</h3>
+                <p>CEO</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/reddeppa" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/reddeppa" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/reddeppa" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://github.com/reddeppa" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/media/team/janu.jpg" alt="Team Member 1">
+                <h3>JAHNAVI</h3>
+                <p>COO</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/jahnavi" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/jahnavi" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/jahnavi" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://github.com/jahnavi" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/media/team/shavan.jpg" alt="Team Member 2">
+                <h3>SHAVAN KUMAR</h3>
+                <p>CTO</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/shavan" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/shavan" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/shavan" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://github.com/shavan" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/media/team/javeed.jpg" alt="Team Member 3">
+                <h3>JAVEED</h3>
+                <p>Designer</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/javeed" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/javeed" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/javeed" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://github.com/javeed" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <h2>Our <span>Mission</span></h2>
+        <p>Our mission is to inspire innovation, foster collaboration, and deliver impactful solutions that transform industries and improve lives worldwide.</p>
+    </div>
+</section>
+{% endif %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about-us">About us</a></li>
+                    <li><a href="{% url 'services' %}">Our Services</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Affliate process</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Online shop</h4>
+                <ul>
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">Bag</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Dress</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-content">
+        <p>&copy; 2025 PsychoFit X. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>

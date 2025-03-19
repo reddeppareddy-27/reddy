@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+{% load custom_filters static %}
+{% block start %}
+<div class="profile-container">
+    <div class="profile-header">
+        <!-- Fetch Gravatar Profile Picture -->
+        <img src="https://www.gravatar.com/avatar/{{ user.email|lower|md5 }}?s=150&d=identicon" 
+             alt="Profile Picture" 
+             class="profile-picture">
+        <h1>Welcome, {{ user.username }}</h1>
+    </div>
+    <div class="profile-details">
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Bio:</strong> {{ user.profile.bio|default:"No bio available." }}</p> <!-- Fallback if bio is empty -->
+        <p><strong>Location:</strong> {{ user.profile.location|default:"No location set." }}</p> <!-- Fallback if location is empty -->
+    </div>
+    <div class="logout-container">
+        <a href="{% url 'logout' %}" class="btn btn-logout">Logout</a> <!-- Logout button as a link -->
+    </div>
+</div>
+<script src="/media/js/profile.js"></script> <!-- Corrected to use Django's static tag -->
+{% endblock %}
+

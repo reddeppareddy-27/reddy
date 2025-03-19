@@ -1,0 +1,143 @@
+
+/* Services Section */
+#services {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#services .intro h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+#services .intro p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+#services h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #007bff;
+}
+
+/* Service Cards */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive Design */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+    .service-cards {
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 calc(45% - 1rem); /* Two cards per row */
+    }
+
+    #services .intro h1 {
+        font-size: 2rem;
+    }
+
+    #services h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+    }
+
+    .card {
+        flex: 1 1 100%; /* Full-width cards on mobile */
+    }
+
+    #services .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    #services .intro p {
+        font-size: 1rem;
+    }
+}
+
+/* For Small Mobile Devices */
+@media (max-width: 480px) {
+    #services .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    #services .intro p {
+        font-size: 0.9rem;
+    }
+
+    #services h2 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card ul li {
+        font-size: 0.8rem;
+    }
+}

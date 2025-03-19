@@ -1,0 +1,216 @@
+/* Import the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Styling the forgot-password-section */
+.forgot-password-section {
+    font-family: 'Poppins', sans-serif; /* Use the Poppins font */
+    background-color: #fff; /* White background for the section */
+    width: 100vw; /* Full width */
+    height: 85vh; /* Full height */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    box-sizing: border-box; /* Include padding in width and height */
+    position: relative; /* Ensure correct positioning */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 10; /* Bring to the foreground */
+}
+
+/* Hover effect for the entire section */
+.forgot-password-section:hover {
+    background-color: #f0f2f5; /* Change the background color on hover */
+    transform: scale(1.02); /* Slight scaling effect */
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Form container inside the section */
+.forgot-password-section form {
+    background-color: #ffffff; /* Form background */
+    padding: 30px; /* Padding inside the form */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle form shadow */
+    text-align: center; /* Center align content */
+    max-width: 400px; /* Restrict max width for the form */
+    width: 100%; /* Responsive width */
+}
+
+/* Heading styles */
+.forgot-password-section h3 {
+    font-size: 22px; /* Size of the heading */
+    color: #333; /* Neutral text color */
+    margin-bottom: 20px; /* Space below heading */
+    font-weight: 600; /* Slightly bold for emphasis */
+}
+.messages p.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Label styles */
+.forgot-password-section label {
+    display: block; /* Separate line for the label */
+    text-align: left; /* Align text to the left */
+    font-size: 14px; /* Smaller font for the label */
+    margin-bottom: 8px; /* Space below label */
+    font-weight: 500; /* Medium font weight */
+    color: #555; /* Grey label color */
+}
+
+/* Input field styles */
+.forgot-password-section input[type="email"] {
+    width: 100%; /* Full width for input */
+    padding: 12px; /* Padding inside input */
+    margin-bottom: 15px; /* Space below input */
+    border: 1px solid #ccc; /* Neutral border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for input */
+    box-sizing: border-box; /* Include padding in width/height */
+    transition: border-color 0.3s ease; /* Smooth focus transition */
+}
+
+.forgot-password-section input[type="email"]:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #007bff; /* Blue highlight */
+    box-shadow: 0px 0px 4px rgba(0, 123, 255, 0.3); /* Subtle blue glow */
+}
+
+/* Button styling */
+.forgot-password-section button {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding inside button */
+    background-color: #007bff; /* Primary blue button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    color: #fff; /* White text */
+    font-size: 16px; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: 600; /* Bold for emphasis */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+}
+
+.forgot-password-section button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.forgot-password-section button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+.reset-password-section {
+    font-family: 'Poppins', sans-serif; /* Use the Poppins font */
+    background-color: #f9f9f9; /* Light grey background for the section */
+    width: 100vw; /* Full width of the viewport */
+    height: 85vh; /* Full height of the viewport */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    box-sizing: border-box; /* Include padding in dimensions */
+    padding: 20px; /* Add some padding */
+}
+
+/* Form container inside the section */
+.reset-password-section form {
+    background-color: #fff; /* White background for the form */
+    padding: 40px 50px; /* Generous padding inside the form */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Strong shadow for depth */
+    text-align: center; /* Center align the content */
+    max-width: 400px; /* Wide form layout */
+    width: 100%; /* Responsive full width */
+}
+
+/* Heading styles */
+.reset-password-section h3 {
+    font-size: 26px; /* Larger heading size for prominence */
+    color: #333; /* Neutral dark text color */
+    margin-bottom: 25px; /* Space below the heading */
+    font-weight: 600; /* Make it bold for emphasis */
+}
+
+/* Label styles */
+.reset-password-section label {
+    display: block; /* Ensure the label takes its own line */
+    text-align: left; /* Align text to the left */
+    font-size: 16px; /* Larger font size for readability */
+    margin-bottom: 10px; /* Space below the label */
+    font-weight: 500; /* Medium weight for clarity */
+    color: #555; /* Light grey for labels */
+}
+
+/* Input field styles */
+.reset-password-section input[type="password"] {
+    width: 100%; /* Full width for input fields */
+    padding: 14px; /* Comfortable padding for users */
+    margin-bottom: 20px; /* Space below the input */
+    border: 1px solid #ccc; /* Neutral grey border */
+    border-radius: 5px; /* Smooth rounded corners */
+    font-size: 16px; /* Font size for the input text */
+    box-sizing: border-box; /* Include padding in dimensions */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover and focus effects */
+}
+
+.reset-password-section input[type="password"]:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0px 0px 6px rgba(0, 123, 255, 0.3); /* Subtle blue glow */
+}
+
+/* Button styling */
+.reset-password-section button {
+    width: 100%; /* Full-width button */
+    padding: 14px; /* Comfortable padding for buttons */
+    background-color: #007bff; /* Primary blue background */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for modern design */
+    color: #fff; /* White text */
+    font-size: 16px; /* Larger text size */
+    font-weight: 600; /* Bold text for emphasis */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+}
+
+.reset-password-section button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.reset-password-section button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .forgot-password-section form {
+        padding: 20px; /* Reduce padding for small screens */
+    }
+
+    .forgot-password-section h3 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .forgot-password-section input[type="email"],
+    .forgot-password-section button {
+        font-size: 14px; /* Adjust font size for inputs and buttons */
+    }
+}
+@media (max-width: 768px) {
+    .reset-password-section form {
+        padding: 30px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .reset-password-section h3 {
+        font-size: 22px; /* Smaller heading size */
+    }
+
+    .reset-password-section input[type="password"],
+    .reset-password-section button {
+        font-size: 14px; /* Adjust font size for inputs and buttons */
+    }
+}

@@ -1,0 +1,44 @@
+{% extends "base/base.html" %}
+
+{% block start %}
+<section class="combined-section">
+    <h1>7-Day Height Growth Plan with Exercises</h1>
+    <div class="container">
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            {% for plan in diet_plans %}
+            <div class="card">
+                <h2>{{ plan.day }}</h2>
+                <div class="diet-plan">
+                    <h3>Diet Plan</h3>
+                    <ul>
+                        <li><strong>Breakfast:</strong> {{ plan.breakfast }}</li>
+                        <li><strong>Lunch:</strong> {{ plan.lunch }}</li>
+                        <li><strong>Dinner:</strong> {{ plan.dinner }}</li>
+                    </ul>
+                </div>
+                <div class="exercises">
+                    <h3>Exercises</h3>
+                    <ul>
+                        {% for exercise in plan.exercises.all %}
+                        <li class="exercise-item">
+                            <h4 class="exercise-name">{{ exercise.name }}</h4>
+                            <p class="exercise-description">{{ exercise.description }}</p>
+                            {% for animation in exercise.animations.all %}
+                                <a href="{{ animation.youtube_url }}" class="youtube-button" target="_blank">Watch on YouTube</a>
+                            {% empty %}
+                                <p>No animation available for this exercise.</p>
+                            {% endfor %}
+                        </li>
+                        {% empty %}
+                        <li>No exercises available for this day.</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
