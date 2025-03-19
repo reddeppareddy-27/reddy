@@ -19,3 +19,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'psychofit_x.settings')
 
 application = get_asgi_application()
 
+

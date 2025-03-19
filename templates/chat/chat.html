@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gym Live Chat</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #chat-log { border: 1px solid black; height: 300px; overflow-y: scroll; margin-bottom: 10px; padding: 10px; }
+        #chat-message-input { width: 80%; padding: 10px; }
+        #chat-message-submit { width: 18%; padding: 10px; background-color: blue; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h1>Gym Live Chat</h1>
+    <div id="chat-log"></div>
+    <input id="chat-message-input" type="text" placeholder="Type your message">
+    <button id="chat-message-submit">Send</button>
+
+    <script>
+        const chatSocket = new WebSocket(
+            'ws://localhost:8000/ws/chat/'
+        );
+
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            const chatLog = document.querySelector('#chat-log');
+            chatLog.innerHTML += `<div>${data.message}</div>`;
+            chatLog.scrollTop = chatLog.scrollHeight;
+        };
+
+        chatSocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly.');
+        };
+
+        document.querySelector('#chat-message-submit').onclick = function() {
+            const messageInput = document.querySelector('#chat-message-input');
+            const message = messageInput.value;
+            chatSocket.send(JSON.stringify({'message': message}));
+            messageInput.value = '';
+        };
+
+        chatSocket.onopen = function() {
+        console.log("WebSocket connection established.");
+        };
+        chatSocket.onerror = function(error) {
+            console.error("WebSocket error:", error);
+        };
+        chatSocket.onclose = function() {
+            console.log("WebSocket connection closed.");
+        };
+
+        
+    </script>
+</body>
+</html>

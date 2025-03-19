@@ -30,7 +30,6 @@ urlpatterns = [
     path('', include('height_growth.urls')),
     path('', include('gymlocator.urls')),
     path('', include('contactus.urls')),
-    
     path('services/', include('services.urls')),
     path('admin/', admin.site.urls),
 ]
@@ -43,5 +42,11 @@ if settings.DEBUG:
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += staticfiles_urlpatterns()
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),  # Add Debug Toolbar URLs
+    ] + urlpatterns
 
 

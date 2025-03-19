@@ -17,7 +17,14 @@ def get_cities(request):
     cities = list(District.objects.get(id=district_id).cities.values('id', 'name'))
     return JsonResponse({'cities': cities})
 
+from django.conf import settings  # Import settings
+
 def get_gyms(request):
     city_id = request.GET.get('city_id')
-    gyms = list(City.objects.get(id=city_id).gyms.values('name', 'phone_number', 'google_maps_link'))
-    return JsonResponse({'gyms': gyms})
+    gyms = City.objects.get(id=city_id).gyms.values('name', 'phone_number', 'google_maps_link', 'image')
+    gyms_with_image_url = [
+        {**gym, 'image': request.build_absolute_uri(settings.MEDIA_URL + gym['image'])} if gym['image'] else {**gym, 'image': None}
+        for gym in gyms
+    ]
+    return JsonResponse({'gyms': gyms_with_image_url})
+

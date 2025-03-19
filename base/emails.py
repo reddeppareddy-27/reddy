@@ -3,7 +3,7 @@ from django.template.loader import render_to_string
 from django.conf import settings
 from django.core.mail import send_mail
 import logging
-from django.contrib.sites.models import Site
+
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.conf import settings
@@ -15,8 +15,7 @@ logger = logging.getLogger(__name__)
 def send_account_activation_email(email, email_token):
     try:
         # Construct the activation link
-        activation_link = f"https://{settings.DOMAIN_NAME}/accounts/activate/{email_token}"
-
+        activation_link = f'http://127.0.0.1:8000/accounts/activate/{email_token}'
 
         # Email subject and sender
         subject = 'Activate Your Account'
@@ -51,7 +50,7 @@ logger = logging.getLogger(__name__)
 def send_password_reset_email(email, token):
     try:
         # Construct the reset URL
-        reset_url = f"http://{settings.DOMAIN_NAME}/accounts/reset-password/{token}"
+        reset_url = f'http://127.0.0.1:8000/accounts/reset-password/{token}'
         
         # Email subject and sender
         subject = 'Reset Your Password'

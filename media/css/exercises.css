@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.exercise-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.exercise-container h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.exercise-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.exercise-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* 3 items per row */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exercise-item:hover {
+    transform: translateY(-5px);
+}
+
+.exercise-name {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.exercise-description {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.exercise-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .exercise-item {
+        width: calc(50% - 40px); /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .exercise-item {
+        width: calc(100% - 40px); /* 1 item per row */
+    }
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}

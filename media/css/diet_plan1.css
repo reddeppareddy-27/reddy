@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* General Styles */
-
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    
+}
 
 /* Combined Section */
 .combined-section {
@@ -21,23 +27,22 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Gap between cards */
+    gap: 40px; /* Gap between cards */
     justify-content: center;
 }
 
 /* Card Styles */
 .card {
-    width: calc(33.33% - 20px); /* Three cards per row */
-    max-width: 350px; /* Adjust max-width for consistent size */
     background: #fff;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     overflow: hidden;
+    width: calc(33.33% - 20px); /* Three cards in a row */
+    max-width: 350px; /* Adjusted max-width for better spacing */
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Card Hover Effect */
 .card:hover {
     transform: translateY(-7px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
@@ -135,7 +140,7 @@
 
 @media (max-width: 768px) {
     .card {
-        width: calc(90% - 20px); /* Increased card width for smaller devices */
+        width: calc(80% - 20px); /* Increased card width for smaller devices */
     }
 
     .combined-section h1 {
@@ -166,7 +171,7 @@
 
 @media (max-width: 480px) {
     .card {
-        width: calc(100% - 10px); /* Further increased card width for mobile devices */
+        width: calc(90% - 20px); /* Further increased card width for mobile devices */
         padding: 15px;
     }
 
@@ -193,7 +198,7 @@
 }
 @media (max-width: 480px) {
     .card {
-        width: 100%; /* Full width for mobile */
+        width: calc(130% - 20px); /* Further increased card width for mobile devices */
         padding: 15px;
     }
 
