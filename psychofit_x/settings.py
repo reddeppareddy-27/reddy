@@ -19,6 +19,7 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 
 import environ
 
+
 env =environ.Env()
 
 environ.Env.read_env()
